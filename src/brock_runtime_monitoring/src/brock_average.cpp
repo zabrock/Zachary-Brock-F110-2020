@@ -39,6 +39,9 @@ void velocityAverager::cmdVelCallback(const geometry_msgs::Twist::ConstPtr& msg)
 }
 
 double velocityAverager::getAverageVelocity() {
+  // Handle case where no messages have been received yet
+  if(this->n == 0)
+    return 0.0;
   // Calculate the average currently in the buffer
   double sum{0};
   for(int i{0}; i < this->n; i++)

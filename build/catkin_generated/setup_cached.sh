@@ -13,4 +13,4 @@ export PKG_CONFIG_PATH="/home/zeke/brock_ws/devel/lib/pkgconfig:$PKG_CONFIG_PATH
 export PWD="/home/zeke/brock_ws/build"
 export PYTHONPATH="/home/zeke/brock_ws/devel/lib/python2.7/dist-packages:$PYTHONPATH"
 export ROSLISP_PACKAGE_DIRECTORIES="/home/zeke/brock_ws/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
-export ROS_PACKAGE_PATH="/home/zeke/brock_ws/src:$ROS_PACKAGE_PATH"
+export ROS_PACKAGE_PATH="/home/zeke/brock_ws/src:/home/zeke/brock_ws/src:/home/zeke/catkin_ws/src:/opt/ros/melodic/share"
