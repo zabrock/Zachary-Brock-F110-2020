@@ -1,8 +1,8 @@
-prefix=/home/zeke/brock_ws/install
+prefix=/home/zeke/brock_ws/roslab_ws/install
 
 Name: brock_runtime_monitoring
 Description: Description of brock_runtime_monitoring
 Version: 0.0.1
 Cflags: 
 Libs: -L${prefix}/lib 
-Requires: 
+Requires: message_runtime

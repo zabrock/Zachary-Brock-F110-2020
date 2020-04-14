@@ -1,2 +1,2 @@
 ackermann_msgs:beginner_tutorials:brock_runtime_monitoring:need4speed_runtime_monitoring:vesc/vesc:vesc/vesc_ackermann:vesc/vesc_driver:vesc/vesc_msgs
--DCATKIN_DEVEL_PREFIX=/home/zeke/brock_ws/devel -DCMAKE_INSTALL_PREFIX=/home/zeke/brock_ws/install -G Unix Makefiles
+-DCATKIN_DEVEL_PREFIX=/home/zeke/brock_ws/roslab_ws/devel -DCMAKE_INSTALL_PREFIX=/home/zeke/brock_ws/roslab_ws/install -G Unix Makefiles

@@ -1,8 +1,8 @@
-# Install script for directory: /home/zeke/brock_ws/src/brock_runtime_monitoring
+# Install script for directory: /home/zeke/brock_ws/roslab_ws/src/brock_runtime_monitoring
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/zeke/brock_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/zeke/brock_ws/roslab_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/zeke/brock_ws/build/brock_runtime_monitoring/catkin_generated/installspace/brock_runtime_monitoring.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/zeke/brock_ws/roslab_ws/build/brock_runtime_monitoring/catkin_generated/installspace/brock_runtime_monitoring.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/brock_runtime_monitoring/cmake" TYPE FILE FILES
-    "/home/zeke/brock_ws/build/brock_runtime_monitoring/catkin_generated/installspace/brock_runtime_monitoringConfig.cmake"
-    "/home/zeke/brock_ws/build/brock_runtime_monitoring/catkin_generated/installspace/brock_runtime_monitoringConfig-version.cmake"
+    "/home/zeke/brock_ws/roslab_ws/build/brock_runtime_monitoring/catkin_generated/installspace/brock_runtime_monitoringConfig.cmake"
+    "/home/zeke/brock_ws/roslab_ws/build/brock_runtime_monitoring/catkin_generated/installspace/brock_runtime_monitoringConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/brock_runtime_monitoring" TYPE FILE FILES "/home/zeke/brock_ws/src/brock_runtime_monitoring/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/brock_runtime_monitoring" TYPE FILE FILES "/home/zeke/brock_ws/roslab_ws/src/brock_runtime_monitoring/package.xml")
 endif()
 

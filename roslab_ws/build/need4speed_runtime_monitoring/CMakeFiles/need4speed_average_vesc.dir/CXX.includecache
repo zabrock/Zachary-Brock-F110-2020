@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/zeke/brock_ws/devel/include/vesc_msgs/VescState.h
+/home/zeke/brock_ws/roslab_ws/devel/include/vesc_msgs/VescState.h
 string
 -
 vector
@@ -22,7 +22,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/zeke/brock_ws/devel/include/vesc_msgs/VescStateStamped.h
+/home/zeke/brock_ws/roslab_ws/devel/include/vesc_msgs/VescStateStamped.h
 string
 -
 vector
@@ -42,13 +42,13 @@ std_msgs/Header.h
 vesc_msgs/VescState.h
 -
 
-/home/zeke/brock_ws/src/need4speed_runtime_monitoring/src/need4speed_average_vesc.cpp
+/home/zeke/brock_ws/roslab_ws/src/need4speed_runtime_monitoring/src/need4speed_average_vesc.cpp
 ros/ros.h
-/home/zeke/brock_ws/src/need4speed_runtime_monitoring/src/ros/ros.h
+/home/zeke/brock_ws/roslab_ws/src/need4speed_runtime_monitoring/src/ros/ros.h
 std_msgs/Float64.h
-/home/zeke/brock_ws/src/need4speed_runtime_monitoring/src/std_msgs/Float64.h
+/home/zeke/brock_ws/roslab_ws/src/need4speed_runtime_monitoring/src/std_msgs/Float64.h
 vesc_msgs/VescStateStamped.h
-/home/zeke/brock_ws/src/need4speed_runtime_monitoring/src/vesc_msgs/VescStateStamped.h
+/home/zeke/brock_ws/roslab_ws/src/need4speed_runtime_monitoring/src/vesc_msgs/VescStateStamped.h
 
 /opt/ros/melodic/include/ros/advertise_options.h
 ros/forwards.h

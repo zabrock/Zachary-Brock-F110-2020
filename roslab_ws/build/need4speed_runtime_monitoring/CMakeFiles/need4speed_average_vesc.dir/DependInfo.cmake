@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/zeke/brock_ws/src/need4speed_runtime_monitoring/src/need4speed_average_vesc.cpp" "/home/zeke/brock_ws/build/need4speed_runtime_monitoring/CMakeFiles/need4speed_average_vesc.dir/src/need4speed_average_vesc.cpp.o"
+  "/home/zeke/brock_ws/roslab_ws/src/need4speed_runtime_monitoring/src/need4speed_average_vesc.cpp" "/home/zeke/brock_ws/roslab_ws/build/need4speed_runtime_monitoring/CMakeFiles/need4speed_average_vesc.dir/src/need4speed_average_vesc.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -17,7 +17,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/zeke/brock_ws/devel/include"
+  "/home/zeke/brock_ws/roslab_ws/devel/include"
   "/opt/ros/melodic/include"
   "/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   )

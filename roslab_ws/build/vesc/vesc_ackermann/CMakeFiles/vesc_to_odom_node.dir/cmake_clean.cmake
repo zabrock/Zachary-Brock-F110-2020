@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/vesc_to_odom_node.dir/src/vesc_to_odom_node.cpp.o"
   "CMakeFiles/vesc_to_odom_node.dir/src/vesc_to_odom.cpp.o"
-  "/home/zeke/brock_ws/devel/lib/vesc_ackermann/vesc_to_odom_node.pdb"
-  "/home/zeke/brock_ws/devel/lib/vesc_ackermann/vesc_to_odom_node"
+  "/home/zeke/brock_ws/roslab_ws/devel/lib/vesc_ackermann/vesc_to_odom_node.pdb"
+  "/home/zeke/brock_ws/roslab_ws/devel/lib/vesc_ackermann/vesc_to_odom_node"
 )
 
 # Per-language clean rules from dependency scanning.

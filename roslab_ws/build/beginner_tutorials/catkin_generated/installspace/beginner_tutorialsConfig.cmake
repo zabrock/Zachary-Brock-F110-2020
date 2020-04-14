@@ -67,14 +67,14 @@ set(beginner_tutorials_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(beginner_tutorials_SOURCE_PREFIX /home/zeke/brock_ws/src/beginner_tutorials)
-  set(beginner_tutorials_DEVEL_PREFIX /home/zeke/brock_ws/devel)
+  set(beginner_tutorials_SOURCE_PREFIX /home/zeke/brock_ws/roslab_ws/src/beginner_tutorials)
+  set(beginner_tutorials_DEVEL_PREFIX /home/zeke/brock_ws/roslab_ws/devel)
   set(beginner_tutorials_INSTALL_PREFIX "")
   set(beginner_tutorials_PREFIX ${beginner_tutorials_DEVEL_PREFIX})
 else()
   set(beginner_tutorials_SOURCE_PREFIX "")
   set(beginner_tutorials_DEVEL_PREFIX "")
-  set(beginner_tutorials_INSTALL_PREFIX /home/zeke/brock_ws/install)
+  set(beginner_tutorials_INSTALL_PREFIX /home/zeke/brock_ws/roslab_ws/install)
   set(beginner_tutorials_PREFIX ${beginner_tutorials_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/zeke/brock_ws/install/lib;/home/zeke/test_ws/Zachary-Brock-F110-2020/devel/lib;/home/zeke/catkin_ws/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/zeke/brock_ws/roslab_ws/install/lib;/home/zeke/catkin_ws/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

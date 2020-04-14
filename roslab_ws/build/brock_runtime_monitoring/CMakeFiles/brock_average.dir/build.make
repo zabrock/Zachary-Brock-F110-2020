@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/zeke/brock_ws/src
+CMAKE_SOURCE_DIR = /home/zeke/brock_ws/roslab_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/zeke/brock_ws/build
+CMAKE_BINARY_DIR = /home/zeke/brock_ws/roslab_ws/build
 
 # Include any dependencies generated for this target.
 include brock_runtime_monitoring/CMakeFiles/brock_average.dir/depend.make
@@ -58,17 +58,17 @@ include brock_runtime_monitoring/CMakeFiles/brock_average.dir/progress.make
 include brock_runtime_monitoring/CMakeFiles/brock_average.dir/flags.make
 
 brock_runtime_monitoring/CMakeFiles/brock_average.dir/src/brock_average.cpp.o: brock_runtime_monitoring/CMakeFiles/brock_average.dir/flags.make
-brock_runtime_monitoring/CMakeFiles/brock_average.dir/src/brock_average.cpp.o: /home/zeke/brock_ws/src/brock_runtime_monitoring/src/brock_average.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zeke/brock_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object brock_runtime_monitoring/CMakeFiles/brock_average.dir/src/brock_average.cpp.o"
-	cd /home/zeke/brock_ws/build/brock_runtime_monitoring && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/brock_average.dir/src/brock_average.cpp.o -c /home/zeke/brock_ws/src/brock_runtime_monitoring/src/brock_average.cpp
+brock_runtime_monitoring/CMakeFiles/brock_average.dir/src/brock_average.cpp.o: /home/zeke/brock_ws/roslab_ws/src/brock_runtime_monitoring/src/brock_average.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zeke/brock_ws/roslab_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object brock_runtime_monitoring/CMakeFiles/brock_average.dir/src/brock_average.cpp.o"
+	cd /home/zeke/brock_ws/roslab_ws/build/brock_runtime_monitoring && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/brock_average.dir/src/brock_average.cpp.o -c /home/zeke/brock_ws/roslab_ws/src/brock_runtime_monitoring/src/brock_average.cpp
 
 brock_runtime_monitoring/CMakeFiles/brock_average.dir/src/brock_average.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/brock_average.dir/src/brock_average.cpp.i"
-	cd /home/zeke/brock_ws/build/brock_runtime_monitoring && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zeke/brock_ws/src/brock_runtime_monitoring/src/brock_average.cpp > CMakeFiles/brock_average.dir/src/brock_average.cpp.i
+	cd /home/zeke/brock_ws/roslab_ws/build/brock_runtime_monitoring && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zeke/brock_ws/roslab_ws/src/brock_runtime_monitoring/src/brock_average.cpp > CMakeFiles/brock_average.dir/src/brock_average.cpp.i
 
 brock_runtime_monitoring/CMakeFiles/brock_average.dir/src/brock_average.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/brock_average.dir/src/brock_average.cpp.s"
-	cd /home/zeke/brock_ws/build/brock_runtime_monitoring && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zeke/brock_ws/src/brock_runtime_monitoring/src/brock_average.cpp -o CMakeFiles/brock_average.dir/src/brock_average.cpp.s
+	cd /home/zeke/brock_ws/roslab_ws/build/brock_runtime_monitoring && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zeke/brock_ws/roslab_ws/src/brock_runtime_monitoring/src/brock_average.cpp -o CMakeFiles/brock_average.dir/src/brock_average.cpp.s
 
 brock_runtime_monitoring/CMakeFiles/brock_average.dir/src/brock_average.cpp.o.requires:
 
@@ -88,33 +88,33 @@ brock_average_OBJECTS = \
 # External object files for target brock_average
 brock_average_EXTERNAL_OBJECTS =
 
-/home/zeke/brock_ws/devel/lib/brock_runtime_monitoring/brock_average: brock_runtime_monitoring/CMakeFiles/brock_average.dir/src/brock_average.cpp.o
-/home/zeke/brock_ws/devel/lib/brock_runtime_monitoring/brock_average: brock_runtime_monitoring/CMakeFiles/brock_average.dir/build.make
-/home/zeke/brock_ws/devel/lib/brock_runtime_monitoring/brock_average: /opt/ros/melodic/lib/libroscpp.so
-/home/zeke/brock_ws/devel/lib/brock_runtime_monitoring/brock_average: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
-/home/zeke/brock_ws/devel/lib/brock_runtime_monitoring/brock_average: /usr/lib/x86_64-linux-gnu/libboost_signals.so
-/home/zeke/brock_ws/devel/lib/brock_runtime_monitoring/brock_average: /opt/ros/melodic/lib/librosconsole.so
-/home/zeke/brock_ws/devel/lib/brock_runtime_monitoring/brock_average: /opt/ros/melodic/lib/librosconsole_log4cxx.so
-/home/zeke/brock_ws/devel/lib/brock_runtime_monitoring/brock_average: /opt/ros/melodic/lib/librosconsole_backend_interface.so
-/home/zeke/brock_ws/devel/lib/brock_runtime_monitoring/brock_average: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
-/home/zeke/brock_ws/devel/lib/brock_runtime_monitoring/brock_average: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-/home/zeke/brock_ws/devel/lib/brock_runtime_monitoring/brock_average: /opt/ros/melodic/lib/libxmlrpcpp.so
-/home/zeke/brock_ws/devel/lib/brock_runtime_monitoring/brock_average: /opt/ros/melodic/lib/libroscpp_serialization.so
-/home/zeke/brock_ws/devel/lib/brock_runtime_monitoring/brock_average: /opt/ros/melodic/lib/librostime.so
-/home/zeke/brock_ws/devel/lib/brock_runtime_monitoring/brock_average: /opt/ros/melodic/lib/libcpp_common.so
-/home/zeke/brock_ws/devel/lib/brock_runtime_monitoring/brock_average: /usr/lib/x86_64-linux-gnu/libboost_system.so
-/home/zeke/brock_ws/devel/lib/brock_runtime_monitoring/brock_average: /usr/lib/x86_64-linux-gnu/libboost_thread.so
-/home/zeke/brock_ws/devel/lib/brock_runtime_monitoring/brock_average: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
-/home/zeke/brock_ws/devel/lib/brock_runtime_monitoring/brock_average: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
-/home/zeke/brock_ws/devel/lib/brock_runtime_monitoring/brock_average: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
-/home/zeke/brock_ws/devel/lib/brock_runtime_monitoring/brock_average: /usr/lib/x86_64-linux-gnu/libpthread.so
-/home/zeke/brock_ws/devel/lib/brock_runtime_monitoring/brock_average: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
-/home/zeke/brock_ws/devel/lib/brock_runtime_monitoring/brock_average: brock_runtime_monitoring/CMakeFiles/brock_average.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zeke/brock_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/zeke/brock_ws/devel/lib/brock_runtime_monitoring/brock_average"
-	cd /home/zeke/brock_ws/build/brock_runtime_monitoring && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/brock_average.dir/link.txt --verbose=$(VERBOSE)
+/home/zeke/brock_ws/roslab_ws/devel/lib/brock_runtime_monitoring/brock_average: brock_runtime_monitoring/CMakeFiles/brock_average.dir/src/brock_average.cpp.o
+/home/zeke/brock_ws/roslab_ws/devel/lib/brock_runtime_monitoring/brock_average: brock_runtime_monitoring/CMakeFiles/brock_average.dir/build.make
+/home/zeke/brock_ws/roslab_ws/devel/lib/brock_runtime_monitoring/brock_average: /opt/ros/melodic/lib/libroscpp.so
+/home/zeke/brock_ws/roslab_ws/devel/lib/brock_runtime_monitoring/brock_average: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+/home/zeke/brock_ws/roslab_ws/devel/lib/brock_runtime_monitoring/brock_average: /usr/lib/x86_64-linux-gnu/libboost_signals.so
+/home/zeke/brock_ws/roslab_ws/devel/lib/brock_runtime_monitoring/brock_average: /opt/ros/melodic/lib/librosconsole.so
+/home/zeke/brock_ws/roslab_ws/devel/lib/brock_runtime_monitoring/brock_average: /opt/ros/melodic/lib/librosconsole_log4cxx.so
+/home/zeke/brock_ws/roslab_ws/devel/lib/brock_runtime_monitoring/brock_average: /opt/ros/melodic/lib/librosconsole_backend_interface.so
+/home/zeke/brock_ws/roslab_ws/devel/lib/brock_runtime_monitoring/brock_average: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
+/home/zeke/brock_ws/roslab_ws/devel/lib/brock_runtime_monitoring/brock_average: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+/home/zeke/brock_ws/roslab_ws/devel/lib/brock_runtime_monitoring/brock_average: /opt/ros/melodic/lib/libxmlrpcpp.so
+/home/zeke/brock_ws/roslab_ws/devel/lib/brock_runtime_monitoring/brock_average: /opt/ros/melodic/lib/libroscpp_serialization.so
+/home/zeke/brock_ws/roslab_ws/devel/lib/brock_runtime_monitoring/brock_average: /opt/ros/melodic/lib/librostime.so
+/home/zeke/brock_ws/roslab_ws/devel/lib/brock_runtime_monitoring/brock_average: /opt/ros/melodic/lib/libcpp_common.so
+/home/zeke/brock_ws/roslab_ws/devel/lib/brock_runtime_monitoring/brock_average: /usr/lib/x86_64-linux-gnu/libboost_system.so
+/home/zeke/brock_ws/roslab_ws/devel/lib/brock_runtime_monitoring/brock_average: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+/home/zeke/brock_ws/roslab_ws/devel/lib/brock_runtime_monitoring/brock_average: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
+/home/zeke/brock_ws/roslab_ws/devel/lib/brock_runtime_monitoring/brock_average: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+/home/zeke/brock_ws/roslab_ws/devel/lib/brock_runtime_monitoring/brock_average: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
+/home/zeke/brock_ws/roslab_ws/devel/lib/brock_runtime_monitoring/brock_average: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/zeke/brock_ws/roslab_ws/devel/lib/brock_runtime_monitoring/brock_average: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
+/home/zeke/brock_ws/roslab_ws/devel/lib/brock_runtime_monitoring/brock_average: brock_runtime_monitoring/CMakeFiles/brock_average.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zeke/brock_ws/roslab_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/zeke/brock_ws/roslab_ws/devel/lib/brock_runtime_monitoring/brock_average"
+	cd /home/zeke/brock_ws/roslab_ws/build/brock_runtime_monitoring && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/brock_average.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-brock_runtime_monitoring/CMakeFiles/brock_average.dir/build: /home/zeke/brock_ws/devel/lib/brock_runtime_monitoring/brock_average
+brock_runtime_monitoring/CMakeFiles/brock_average.dir/build: /home/zeke/brock_ws/roslab_ws/devel/lib/brock_runtime_monitoring/brock_average
 
 .PHONY : brock_runtime_monitoring/CMakeFiles/brock_average.dir/build
 
@@ -123,10 +123,10 @@ brock_runtime_monitoring/CMakeFiles/brock_average.dir/requires: brock_runtime_mo
 .PHONY : brock_runtime_monitoring/CMakeFiles/brock_average.dir/requires
 
 brock_runtime_monitoring/CMakeFiles/brock_average.dir/clean:
-	cd /home/zeke/brock_ws/build/brock_runtime_monitoring && $(CMAKE_COMMAND) -P CMakeFiles/brock_average.dir/cmake_clean.cmake
+	cd /home/zeke/brock_ws/roslab_ws/build/brock_runtime_monitoring && $(CMAKE_COMMAND) -P CMakeFiles/brock_average.dir/cmake_clean.cmake
 .PHONY : brock_runtime_monitoring/CMakeFiles/brock_average.dir/clean
 
 brock_runtime_monitoring/CMakeFiles/brock_average.dir/depend:
-	cd /home/zeke/brock_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zeke/brock_ws/src /home/zeke/brock_ws/src/brock_runtime_monitoring /home/zeke/brock_ws/build /home/zeke/brock_ws/build/brock_runtime_monitoring /home/zeke/brock_ws/build/brock_runtime_monitoring/CMakeFiles/brock_average.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/zeke/brock_ws/roslab_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zeke/brock_ws/roslab_ws/src /home/zeke/brock_ws/roslab_ws/src/brock_runtime_monitoring /home/zeke/brock_ws/roslab_ws/build /home/zeke/brock_ws/roslab_ws/build/brock_runtime_monitoring /home/zeke/brock_ws/roslab_ws/build/brock_runtime_monitoring/CMakeFiles/brock_average.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : brock_runtime_monitoring/CMakeFiles/brock_average.dir/depend
 

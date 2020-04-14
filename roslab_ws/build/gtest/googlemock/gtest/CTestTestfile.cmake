@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
 # Source directory: /usr/src/googletest/googletest
-# Build directory: /home/zeke/brock_ws/build/gtest/googlemock/gtest
+# Build directory: /home/zeke/brock_ws/roslab_ws/build/gtest/googlemock/gtest
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

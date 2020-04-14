@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/zeke/brock_ws/src/brock_runtime_monitoring/src/brock_average.cpp" "/home/zeke/brock_ws/build/brock_runtime_monitoring/CMakeFiles/brock_average.dir/src/brock_average.cpp.o"
+  "/home/zeke/brock_ws/roslab_ws/src/brock_runtime_monitoring/src/brock_average.cpp" "/home/zeke/brock_ws/roslab_ws/build/brock_runtime_monitoring/CMakeFiles/brock_average.dir/src/brock_average.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -1,4 +1,4 @@
-prefix=/home/zeke/brock_ws/install
+prefix=/home/zeke/brock_ws/roslab_ws/install
 
 Name: vesc_msgs
 Description: Description of vesc_msgs

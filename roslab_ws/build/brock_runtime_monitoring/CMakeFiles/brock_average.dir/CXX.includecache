@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/zeke/brock_ws/src/brock_runtime_monitoring/src/brock_average.cpp
+/home/zeke/brock_ws/roslab_ws/src/brock_runtime_monitoring/src/brock_average.cpp
 ros/ros.h
-/home/zeke/brock_ws/src/brock_runtime_monitoring/src/ros/ros.h
+/home/zeke/brock_ws/roslab_ws/src/brock_runtime_monitoring/src/ros/ros.h
 geometry_msgs/Twist.h
-/home/zeke/brock_ws/src/brock_runtime_monitoring/src/geometry_msgs/Twist.h
+/home/zeke/brock_ws/roslab_ws/src/brock_runtime_monitoring/src/geometry_msgs/Twist.h
 std_msgs/Float64.h
-/home/zeke/brock_ws/src/brock_runtime_monitoring/src/std_msgs/Float64.h
+/home/zeke/brock_ws/roslab_ws/src/brock_runtime_monitoring/src/std_msgs/Float64.h
 
 /opt/ros/melodic/include/geometry_msgs/Twist.h
 string

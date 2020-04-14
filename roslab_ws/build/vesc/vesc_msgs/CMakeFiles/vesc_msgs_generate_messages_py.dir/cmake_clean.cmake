@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/vesc_msgs_generate_messages_py"
-  "/home/zeke/brock_ws/devel/lib/python2.7/dist-packages/vesc_msgs/msg/_VescStateStamped.py"
-  "/home/zeke/brock_ws/devel/lib/python2.7/dist-packages/vesc_msgs/msg/_VescState.py"
-  "/home/zeke/brock_ws/devel/lib/python2.7/dist-packages/vesc_msgs/msg/__init__.py"
+  "/home/zeke/brock_ws/roslab_ws/devel/lib/python2.7/dist-packages/vesc_msgs/msg/_VescState.py"
+  "/home/zeke/brock_ws/roslab_ws/devel/lib/python2.7/dist-packages/vesc_msgs/msg/_VescStateStamped.py"
+  "/home/zeke/brock_ws/roslab_ws/devel/lib/python2.7/dist-packages/vesc_msgs/msg/__init__.py"
 )
 
 # Per-language clean rules from dependency scanning.

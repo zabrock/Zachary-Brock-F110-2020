@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/zeke/brock_ws/devel/setup.sh
+    local-name: /home/zeke/brock_ws/roslab_ws/devel/setup.sh

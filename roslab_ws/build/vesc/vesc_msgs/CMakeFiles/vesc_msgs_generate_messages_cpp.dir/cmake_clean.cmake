@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/vesc_msgs_generate_messages_cpp"
-  "/home/zeke/brock_ws/devel/include/vesc_msgs/VescStateStamped.h"
-  "/home/zeke/brock_ws/devel/include/vesc_msgs/VescState.h"
+  "/home/zeke/brock_ws/roslab_ws/devel/include/vesc_msgs/VescState.h"
+  "/home/zeke/brock_ws/roslab_ws/devel/include/vesc_msgs/VescStateStamped.h"
 )
 
 # Per-language clean rules from dependency scanning.

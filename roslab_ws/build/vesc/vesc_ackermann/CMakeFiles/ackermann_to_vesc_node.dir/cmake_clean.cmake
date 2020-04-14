@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ackermann_to_vesc_node.dir/src/ackermann_to_vesc_node.cpp.o"
   "CMakeFiles/ackermann_to_vesc_node.dir/src/ackermann_to_vesc.cpp.o"
-  "/home/zeke/brock_ws/devel/lib/vesc_ackermann/ackermann_to_vesc_node.pdb"
-  "/home/zeke/brock_ws/devel/lib/vesc_ackermann/ackermann_to_vesc_node"
+  "/home/zeke/brock_ws/roslab_ws/devel/lib/vesc_ackermann/ackermann_to_vesc_node.pdb"
+  "/home/zeke/brock_ws/roslab_ws/devel/lib/vesc_ackermann/ackermann_to_vesc_node"
 )
 
 # Per-language clean rules from dependency scanning.

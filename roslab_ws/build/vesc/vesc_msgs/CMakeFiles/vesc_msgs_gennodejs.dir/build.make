@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/zeke/brock_ws/src
+CMAKE_SOURCE_DIR = /home/zeke/brock_ws/roslab_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/zeke/brock_ws/build
+CMAKE_BINARY_DIR = /home/zeke/brock_ws/roslab_ws/build
 
 # Utility rule file for vesc_msgs_gennodejs.
 
@@ -63,10 +63,10 @@ vesc/vesc_msgs/CMakeFiles/vesc_msgs_gennodejs.dir/build: vesc_msgs_gennodejs
 .PHONY : vesc/vesc_msgs/CMakeFiles/vesc_msgs_gennodejs.dir/build
 
 vesc/vesc_msgs/CMakeFiles/vesc_msgs_gennodejs.dir/clean:
-	cd /home/zeke/brock_ws/build/vesc/vesc_msgs && $(CMAKE_COMMAND) -P CMakeFiles/vesc_msgs_gennodejs.dir/cmake_clean.cmake
+	cd /home/zeke/brock_ws/roslab_ws/build/vesc/vesc_msgs && $(CMAKE_COMMAND) -P CMakeFiles/vesc_msgs_gennodejs.dir/cmake_clean.cmake
 .PHONY : vesc/vesc_msgs/CMakeFiles/vesc_msgs_gennodejs.dir/clean
 
 vesc/vesc_msgs/CMakeFiles/vesc_msgs_gennodejs.dir/depend:
-	cd /home/zeke/brock_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zeke/brock_ws/src /home/zeke/brock_ws/src/vesc/vesc_msgs /home/zeke/brock_ws/build /home/zeke/brock_ws/build/vesc/vesc_msgs /home/zeke/brock_ws/build/vesc/vesc_msgs/CMakeFiles/vesc_msgs_gennodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/zeke/brock_ws/roslab_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zeke/brock_ws/roslab_ws/src /home/zeke/brock_ws/roslab_ws/src/vesc/vesc_msgs /home/zeke/brock_ws/roslab_ws/build /home/zeke/brock_ws/roslab_ws/build/vesc/vesc_msgs /home/zeke/brock_ws/roslab_ws/build/vesc/vesc_msgs/CMakeFiles/vesc_msgs_gennodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : vesc/vesc_msgs/CMakeFiles/vesc_msgs_gennodejs.dir/depend
 

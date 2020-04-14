@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/zeke/brock_ws/src
+CMAKE_SOURCE_DIR = /home/zeke/brock_ws/roslab_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/zeke/brock_ws/build
+CMAKE_BINARY_DIR = /home/zeke/brock_ws/roslab_ws/build
 
 # Utility rule file for beginner_tutorials_gencpp.
 
@@ -63,10 +63,10 @@ beginner_tutorials/CMakeFiles/beginner_tutorials_gencpp.dir/build: beginner_tuto
 .PHONY : beginner_tutorials/CMakeFiles/beginner_tutorials_gencpp.dir/build
 
 beginner_tutorials/CMakeFiles/beginner_tutorials_gencpp.dir/clean:
-	cd /home/zeke/brock_ws/build/beginner_tutorials && $(CMAKE_COMMAND) -P CMakeFiles/beginner_tutorials_gencpp.dir/cmake_clean.cmake
+	cd /home/zeke/brock_ws/roslab_ws/build/beginner_tutorials && $(CMAKE_COMMAND) -P CMakeFiles/beginner_tutorials_gencpp.dir/cmake_clean.cmake
 .PHONY : beginner_tutorials/CMakeFiles/beginner_tutorials_gencpp.dir/clean
 
 beginner_tutorials/CMakeFiles/beginner_tutorials_gencpp.dir/depend:
-	cd /home/zeke/brock_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zeke/brock_ws/src /home/zeke/brock_ws/src/beginner_tutorials /home/zeke/brock_ws/build /home/zeke/brock_ws/build/beginner_tutorials /home/zeke/brock_ws/build/beginner_tutorials/CMakeFiles/beginner_tutorials_gencpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/zeke/brock_ws/roslab_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zeke/brock_ws/roslab_ws/src /home/zeke/brock_ws/roslab_ws/src/beginner_tutorials /home/zeke/brock_ws/roslab_ws/build /home/zeke/brock_ws/roslab_ws/build/beginner_tutorials /home/zeke/brock_ws/roslab_ws/build/beginner_tutorials/CMakeFiles/beginner_tutorials_gencpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : beginner_tutorials/CMakeFiles/beginner_tutorials_gencpp.dir/depend
 
