@@ -12,14 +12,15 @@ import pdb
 pub = rospy.Publisher('pid_error', Float64, queue_size=10)
 
 # You can define constants in Python as uppercase global names like these.
-MIN_DISTANCE = 0.1
-MAX_DISTANCE = 30.0
-MIN_ANGLE = -45.0
-MAX_ANGLE = 225.0
-ANGLE_INCREMENT = 0.00436515314505*180/math.pi
-LOOKAHEAD = 0.5
-THETA = 45
-DESIRED_DISTANCE = 1.0
+MIN_DISTANCE = rospy.get_param("/wall_following_error/min_distance",0.1)
+MAX_DISTANCE = rospy.get_param("/wall_following_error/max_distance",30.0)
+MIN_ANGLE = rospy.get_param("/wall_following_error/min_angle",-45.0)
+MAX_ANGLE = rospy.get_param("/wall_following_error/max_angle",225.0)
+ANGLE_INCREMENT = rospy.get_param("/wall_following_error/angle_increment",0.00436515314505*180/math.pi)
+LOOKAHEAD = rospy.get_param("/wall_following_error/lookahead_distance",0.5)
+THETA = rospy.get_param("/wall_following_error/theta",45)
+DESIRED_DISTANCE = rospy.get_param("/wall_following_error/desired_distance",0.5)
+FOLLOW_METHOD = rospy.get_param("/wall_following_error/min_angle","center")
 
 # data: single message from topic /scan
 # angle: between -45 to 225 degrees, where 0 degrees is directly to the right
@@ -130,7 +131,14 @@ def followCenter(data):
 # Callback for receiving LIDAR data on the /scan topic.
 # data: the LIDAR data, published as a list of distances to the wall.
 def scan_callback(data):
-  error = followCenter(data)
+  if FOLLOW_METHOD == "left":
+    error = followLeft(data,DESIRED_DISTANCE)
+  elif FOLLOW_METHOD == "center":
+    error = followCenter(data)
+  elif FOLLOW_METHOD == "right":
+    error = followRight(data,DESIRED_DISTANCE)
+  else:
+    raise ValueError("Incorrect follow method specified") 
 
   msg = Float64()
   msg.data = error
