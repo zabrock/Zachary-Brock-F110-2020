@@ -86,7 +86,6 @@ def followLeft(data, desired_distance):
   # Error for following on left is (desired_distance - D_future) such that
   # positive error encourages turning the steer tire right, or away from
   # the wall
-  rospy.loginfo("Left reading: %f, Projected distance: %f", b, D_future)
   return desired_distance - D_future
 
 # data: single message from topic /scan
@@ -105,7 +104,6 @@ def followRight(data, desired_distance):
   # Error for following on right is (D_future - desired_distance) such that
   # positive error encourages turning the steer tire right, or toward the
   # wall
-  rospy.loginfo("Right reading: %f, Projected distance: %f", b, D_future)
   return D_future - desired_distance
 
 # data: single message from topic /scan
@@ -131,14 +129,36 @@ def followCenter(data):
   # Error for center following is (D_right - desired_distance) such that
   # positive error encourages turning the steer tire right, or toward the
   # right wall
-  rospy.loginfo("D_left: %f, D_right: %f",D_left, D_right)
   return D_right - desired_distance
+
+def filter_lidar(data):
+  # Filter the ranges in data with a simple moving average filter
+  filtered_ranges = np.zeros(len(data.ranges))
+  filter_width = rospy.get_param("/pid_error_node/filter_width")
+  # Check that filter_width is valid value; must be odd so that
+  # the width on either side of the value to be replaced is equal
+  if not filter_width % 2 or not filter_width > 0:
+    raise ValueError("ROS parameter filter_width must be positive and odd")
+  half_width = (filter_width-1)/2
+
+  for i in range(0,len(data.ranges)):
+    min_idx = max(0,i-half_width)
+    max_idx = min(i+half_width,len(data.ranges)-1)
+    # Add one to max_idx since Python runs only to 1:n for [1:n+1]
+    # indexing and add one to difference in indices for correct averaging
+    filtered_ranges[i] = sum(data.ranges[min_idx:max_idx+1])/(max_idx-min_idx+1)
+
+  data.ranges = filtered_ranges
+  return data
 
 # Callback for receiving LIDAR data on the /scan topic.
 # data: the LIDAR data, published as a list of distances to the wall.
 def scan_callback(data):
   DESIRED_DISTANCE = rospy.get_param("/pid_error_node/desired_distance")
   FOLLOW_METHOD = rospy.get_param("/pid_error_node/follow_method")
+
+  if rospy.get_param("/pid_error_node/filter_lidar"):
+    data = filter_lidar(data)
 
   if FOLLOW_METHOD == "left":
     error = followLeft(data,DESIRED_DISTANCE)

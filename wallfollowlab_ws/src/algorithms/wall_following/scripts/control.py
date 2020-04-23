@@ -6,13 +6,11 @@ from std_msgs.msg import Float64
 import numpy as np
 import math
 
-# TODO: modify these constants to make the car follow walls smoothly.
-
-
 # Persistent variables to hold previous error and time values for
 # derivative calculation
 previous_error = 0.0
 previous_time = 0.0
+previous_de_dt = 0.0
 
 pub = rospy.Publisher('drive_parameters', drive_param, queue_size=1)
 
@@ -35,13 +33,20 @@ def calculate_velocity(steer_angle):
   else:
     return MIN_SPEED
 
+def filter_error(error):
+  # Apply a first-order low-pass filter to the error value
+  # to smooth out the noise
+  alpha = rospy.get_param("/control_node/lp_filter_coefficient")
+  return alpha*previous_error + (1-alpha)*error
+  
 # Callback for receiving PID error data on the /pid_error topic
 # data: the PID error from pid_error_node, published as a Float64
 def control_callback(msg):
   global previous_error
+  global previous_de_dt
   global previous_time
   # Extract error and get current time for derivative calculation
-  error = msg.data
+  error = filter_error(msg.data)
   time = rospy.Time.now().to_sec()
   # Don't calculate derror_dt if no previous value was saved
   if previous_time == 0.0:
@@ -51,9 +56,11 @@ def control_callback(msg):
 
   KP = rospy.get_param("/control_node/kp")
   KD = rospy.get_param("/control_node/kd")
+  alpha_d = rospy.get_param("/control_node/deriv_filter_coefficient")
 
   # Use PD control to determine steer tire angle
-  pid_output = KP*error + KD*derror_dt
+  # Apply low-pass filter to derivative to reduce high-frequency gain
+  pid_output = KP*error + KD*(alpha_d*previous_de_dt + (1-alpha_d)*derror_dt)
   angle = math.radians(pid_output)    #convert the angle to radians if not already in radians
   angle = np.clip(angle, -0.4189, 0.4189)  # 0.4189 radians = 24 degrees because car can only turn 24 degrees max
 
@@ -62,6 +69,7 @@ def control_callback(msg):
 
   # Save error and time for next iteration
   previous_error = error
+  previous_de_dt = derror_dt
   previous_time = time
 
   msg = drive_param()
