@@ -7,15 +7,7 @@ import numpy as np
 import math
 
 # TODO: modify these constants to make the car follow walls smoothly.
-KP = rospy.get_param("/wall_following_pid/kp",-60.0)
-KD = rospy.get_param("/wall_following_pid/kd",0.0)
 
-# Set speed thresholds and speed values
-MAX_SPEED = rospy.get_param("/wall_following_pid/max_speed",1.5)
-MED_SPEED = rospy.get_param("/wall_following_pid/med_speed",1.0)
-MIN_SPEED = rospy.get_param("/wall_following_pid/min_speed",0.5)
-MAX_SPEED_THRESH = rospy.get_param("/wall_following_pid/max_speed_threshold",10*np.pi/180)
-MED_SPEED_THRESH = rospy.get_param("/wall_following_pid/med_speed_threshold",20*np.pi/180)
 
 # Persistent variables to hold previous error and time values for
 # derivative calculation
@@ -28,6 +20,13 @@ pub = rospy.Publisher('drive_parameters', drive_param, queue_size=1)
 # steer_angle: steer tire angle computed by PID controller, radians
 # Outputs velocity in meters per second
 def calculate_velocity(steer_angle):
+  # Set speed thresholds and speed values
+  MAX_SPEED = rospy.get_param("/control_node/max_speed")
+  MED_SPEED = rospy.get_param("/control_node/med_speed")
+  MIN_SPEED = rospy.get_param("/control_node/min_speed")
+  MAX_SPEED_THRESH = rospy.get_param("/control_node/max_speed_threshold")
+  MED_SPEED_THRESH = rospy.get_param("/control_node/med_speed_threshold")
+
   # Follow the step-like velocity thresholds as defined in the lab writeup
   if abs(steer_angle) < MAX_SPEED_THRESH:
     return MAX_SPEED
@@ -49,6 +48,9 @@ def control_callback(msg):
     derror_dt = 0
   else:
     derror_dt = (error - previous_error)/(time - previous_time)
+
+  KP = rospy.get_param("/control_node/kp")
+  KD = rospy.get_param("/control_node/kd")
 
   # Use PD control to determine steer tire angle
   pid_output = KP*error + KD*derror_dt

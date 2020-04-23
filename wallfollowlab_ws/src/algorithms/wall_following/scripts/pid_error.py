@@ -12,20 +12,17 @@ import pdb
 pub = rospy.Publisher('pid_error', Float64, queue_size=10)
 
 # You can define constants in Python as uppercase global names like these.
-MIN_DISTANCE = rospy.get_param("/wall_following_error/min_distance",0.1)
-MAX_DISTANCE = rospy.get_param("/wall_following_error/max_distance",30.0)
-MIN_ANGLE = rospy.get_param("/wall_following_error/min_angle",-45.0)
-MAX_ANGLE = rospy.get_param("/wall_following_error/max_angle",225.0)
-ANGLE_INCREMENT = rospy.get_param("/wall_following_error/angle_increment",0.00436515314505*180/math.pi)
-LOOKAHEAD = rospy.get_param("/wall_following_error/lookahead_distance",0.5)
-THETA = rospy.get_param("/wall_following_error/theta",45)
-DESIRED_DISTANCE = rospy.get_param("/wall_following_error/desired_distance",0.5)
-FOLLOW_METHOD = rospy.get_param("/wall_following_error/min_angle","center")
+MIN_DISTANCE = rospy.get_param("/pid_error_node/min_distance")
+MAX_DISTANCE = rospy.get_param("/pid_error_node/max_distance")
+MIN_ANGLE = rospy.get_param("/pid_error_node/min_angle")
+MAX_ANGLE = rospy.get_param("/pid_error_node/max_angle")
+ANGLE_INCREMENT = np.degrees(rospy.get_param("/pid_error_node/angle_increment"))
 
 # data: single message from topic /scan
 # angle: between -45 to 225 degrees, where 0 degrees is directly to the right
 # Outputs length in meters to object with angle in lidar scan field of view
 def getRange(data, angle):
+
   # Make sure the input angle is within acceptable range
   if angle > MAX_ANGLE:
     angle = MAX_ANGLE
@@ -77,6 +74,9 @@ def getFutureDistance(a,b,theta,lookahead_dist):
 # desired_distance: desired distance to the left wall [meters]
 # Outputs the PID error required to make the car follow the left wall.
 def followLeft(data, desired_distance):
+  LOOKAHEAD = rospy.get_param("/pid_error_node/lookahead_distance")
+  THETA = rospy.get_param("/pid_error_node/theta")
+
   # Length b will be found from the reading at 180 degrees
   # while length a is found at a reading (180-theta) degrees
   b = getRange(data,180)
@@ -93,6 +93,9 @@ def followLeft(data, desired_distance):
 # desired_distance: desired distance to the right wall [meters]
 # Outputs the PID error required to make the car follow the right wall.
 def followRight(data, desired_distance):
+  LOOKAHEAD = rospy.get_param("/pid_error_node/lookahead_distance")
+  THETA = rospy.get_param("/pid_error_node/theta")
+
   # Length b will be found from the reading at 0 degrees
   # while length a is found at a reading theta degrees
   b = getRange(data,0)
@@ -109,6 +112,9 @@ def followRight(data, desired_distance):
 # Outputs the PID error required to make the car drive in the middle
 # of the hallway.
 def followCenter(data):
+  LOOKAHEAD = rospy.get_param("/pid_error_node/lookahead_distance")
+  THETA = rospy.get_param("/pid_error_node/theta")
+
   # Determine distance from left wall
   b_left = getRange(data,180)
   a_left = getRange(data,180-THETA)
@@ -131,6 +137,9 @@ def followCenter(data):
 # Callback for receiving LIDAR data on the /scan topic.
 # data: the LIDAR data, published as a list of distances to the wall.
 def scan_callback(data):
+  DESIRED_DISTANCE = rospy.get_param("/pid_error_node/desired_distance")
+  FOLLOW_METHOD = rospy.get_param("/pid_error_node/follow_method")
+
   if FOLLOW_METHOD == "left":
     error = followLeft(data,DESIRED_DISTANCE)
   elif FOLLOW_METHOD == "center":

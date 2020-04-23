@@ -1,0 +1,17 @@
+min_distance: 0.1
+max_distance: 30.0
+min_angle: -45.0
+max_angle: 225.0
+angle_increment: rad(0.00436515314505)
+lookahead_distance: 0.1
+theta: 45
+desired_distance: 0.3
+follow_method: "left"
+
+kp: -30.0
+kd: 0.0
+max_speed: 1.0
+med_speed: 1.0
+min_speed: 1.0
+max_speed_threshold: deg(10)
+med_speed_threshold: deg(20)

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <launch>
   <include file="$(find racecar_simulator)/launch/simulator.launch">
-        <arg name="map" value="$(find racecar_simulator)/maps/map_trackporto.yaml"/>
+        <arg name="map" value="$(find racecar_simulator)/maps/levine.yaml"/>
   </include>
 
   <!-- output="screen" allows us to see print statements-->
@@ -13,5 +13,7 @@
     <rosparam command="load" file="$(find brock_wall_following)/config/params.yaml"/>
   </node>
   <node pkg="wall_following" name="sim_connector_node" type="sim_connector.py" output="screen"/>
+
+  <node pkg="brock_wall_following" name="error_analysis" type="brock_analysis" output="screen" />
 
 </launch>

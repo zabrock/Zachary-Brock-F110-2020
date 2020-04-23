@@ -39,8 +39,6 @@ void dataAnalyzer::callback(const std_msgs::Float64::ConstPtr& msg)
   // Now package new data into the outgoing message and publish
   brock_wall_following::ErrorAnalysis analysis_msg;
   analysis_msg.running_avg_abs_error.data = this->running_sum/this->running_count;
-  ROS_INFO("Running count: %llu",this->running_count);
-  ROS_INFO("Running sum: %Lf",this->running_sum);
   analysis_msg.running_max_abs_error.data = this->running_max;
   this->pub.publish(analysis_msg);
 }
